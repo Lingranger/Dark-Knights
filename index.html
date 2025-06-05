@@ -43,6 +43,29 @@
       margin: 20px auto;
       padding: 0 20px;
     }
+    .feature-image {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+    }
+    .sections {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .section-box {
+      flex: 1 1 calc(50% - 20px);
+      background: #ffffff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    .section-box h3 {
+      margin-top: 0;
+      color: #005f73;
+    }
     footer {
       background: #005f73;
       color: #fff;
@@ -50,13 +73,18 @@
       padding: 15px 0;
       margin-top: 40px;
     }
+    @media (max-width: 600px) {
+      .section-box {
+        flex: 1 1 100%;
+      }
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Dart Players Hub</h1>
-  <p>Your resource for darts tips, history, and gear</p>
+  <h1>Dart Knights Hub</h1>
+  <p>Your ultimate resource for darts tips, history, and gear</p>
 </header>
 
 <nav>
@@ -70,8 +98,29 @@
 <main>
   <h2>Welcome to Dart Knights Hub</h2>
   <p>
-    This is the main page. Click on the links above to explore different sections about darts.
+    Whether you're a beginner or an experienced darts player, this site is your one-stop resource for everything darts-related. Explore the world of darts through helpful guides, expert tips, historical insights, and the best equipment reviews.
   </p>
+
+  <img src="images/dartboard.jpg" alt="Dartboard" class="feature-image" />
+
+  <div class="sections">
+    <div class="section-box">
+      <h3>🎯 Learn the Basics</h3>
+      <p>Understand how the game is played, the layout of the dartboard, and the basic scoring system. Visit our <a href="introduction.html">Introduction</a> page to get started.</p>
+    </div>
+    <div class="section-box">
+      <h3>💡 Pro Tips</h3>
+      <p>Improve your throw and consistency with expert strategies. Check out the <a href="tips.html">Tips & Techniques</a> section to level up your skills.</p>
+    </div>
+    <div class="section-box">
+      <h3>📜 History</h3>
+      <p>Learn where darts came from and how it evolved from a pub game into a global sport. Explore the <a href="history.html">History</a> page for fascinating facts.</p>
+    </div>
+    <div class="section-box">
+      <h3>🧰 Equipment Guide</h3>
+      <p>Choosing the right darts and accessories is key. Visit the <a href="equipment.html">Equipment</a> page to find reviews and recommendations.</p>
+    </div>
+  </div>
 </main>
 
 <footer>
