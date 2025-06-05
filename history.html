@@ -3,31 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>History of Darts | Dart Knights Hub</title>
+  <title>Photo Bombers & Group Photos | Caraga Dart Knights</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f7f9fc;
+      background: #f0f4f8;
       color: #333;
-      line-height: 1.6;
     }
     header {
-      background: #005f73;
+      background: #14213d;
       color: #fff;
       padding: 20px 0;
       text-align: center;
     }
     nav {
-      background: #0a9396;
+      background: #0077b6;
       display: flex;
       justify-content: center;
       gap: 20px;
       padding: 15px 0;
     }
     nav a {
-      color: #e9d8a6;
+      color: #caf0f8;
       text-decoration: none;
       font-weight: bold;
       padding: 8px 15px;
@@ -35,34 +34,42 @@
       transition: background 0.3s;
     }
     nav a:hover {
-      background: #94d2bd;
-      color: #001219;
+      background: #90e0ef;
+      color: #03045e;
     }
     main {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 20px auto;
       padding: 0 20px;
     }
     h2 {
-      color: #005f73;
+      color: #14213d;
+      text-align: center;
+      margin-bottom: 30px;
     }
-    .video-container {
-      margin: 20px 0;
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
+    .gallery img {
       width: 100%;
-      height: 100%;
-      border: none;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+    .caption {
+      text-align: center;
+      font-style: italic;
+      margin-top: 8px;
+      color: #555;
     }
     footer {
-      background: #005f73;
+      background: #14213d;
       color: #fff;
       text-align: center;
       padding: 15px 0;
@@ -73,44 +80,44 @@
 <body>
 
 <header>
-  <h1>History of Darts</h1>
-  <p>From pub game to professional sport</p>
+  <h1>Photo Bombers & Group Photos</h1>
+  <p>Candid moments and unforgettable memories with the Caraga Dart Knights</p>
 </header>
 
 <nav>
   <a href="index.html">Home</a>
-  <a href="introduction.html">Introduction</a>
-  <a href="tips.html">Tips & Techniques</a>
-  <a href="history.html">History</a>
+  <a href="introduction.html">Top Players</a>
+  <a href="tips.html">Rankings</a>
+  <a href="history.html">Photos</a>
   <a href="equipment.html">Equipment</a>
   <a href="contact.html">Contact</a>
 </nav>
 
 <main>
-  <h2>Origins and Evolution</h2>
-  <p>
-    The game of darts has a rich and fascinating history. What began as a pastime for soldiers in medieval England has evolved into a highly competitive professional sport.
-    Darts was originally played with arrows and the bottom of wine barrels. Over the centuries, it transformed into the organized game we know today, with standardized rules and international tournaments.
-  </p>
-
-  <h2>📺 Watch and Learn</h2>
-  <p>Here are some great videos that dive into the history and growth of darts:</p>
-
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/BN1-6u9DLIA" title="The ENTIRE HISTORY Of Darts" allowfullscreen></iframe>
-  </div>
-
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/8ylERduOa_k" title="'It's Taking Over America' - The Global Rise of Darts" allowfullscreen></iframe>
-  </div>
-
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/PxhKxwt4R2U" title="The Complete History of Darts: From Pubs to Prizes" allowfullscreen></iframe>
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <div>
+      <img src="images/group1.jpg" alt="Team group photo">
+      <p class="caption">Caraga Dart Knights - Regional Meet</p>
+    </div>
+    <div>
+      <img src="images/photobomb1.jpg" alt="Funny photobomb moment">
+      <p class="caption">Serious Plays</p>
+    </div>
+    <div>
+      <img src="images/group2.jpg" alt="Group huddle">
+      <p class="caption">Team huddle before finals match</p>
+    </div>
+    <div>
+      <img src="images/photobomb2.jpg" alt="Photobomb selfie">
+      <p class="caption">Unexpected guest in a team selfie</p>
+    </div>
+    <!-- Add more photos as needed -->
   </div>
 </main>
 
 <footer>
-  &copy; 2025 Dart Knights Hub. All rights reserved.
+  &copy; 2025 Caraga Dart Knights. All rights reserved.
 </footer>
 
 </body>
