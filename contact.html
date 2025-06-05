@@ -11,13 +11,14 @@
       box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
       height: 100%;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       background: #f7f9fc;
+      overflow-x: hidden;
     }
 
     .video-sides {
@@ -28,23 +29,6 @@
       z-index: -1;
     }
 
-    .left-video, .right-video {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    .left-video video,
-    .right-video video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.2;
-    }
-
     .left-video {
       left: 0;
     }
@@ -53,83 +37,59 @@
       right: 0;
     }
 
+    .left-video video,
+    .right-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+    }
+
     .content {
       width: 60%;
-      background: none;
+      background: #ffffff;
+      min-height: 100vh;
     }
 
-    header {
-      background: #005f73;
-      color: #fff;
-      padding: 20px 0;
+    header, nav, main, footer {
+      padding: 20px;
       text-align: center;
-    }
-
-    nav {
-      background: #0a9396;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 15px 0;
-      flex-wrap: wrap;
     }
 
     nav a {
-      color: #e9d8a6;
+      margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
-      padding: 8px 15px;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-
-    nav a:hover {
-      background: #94d2bd;
-      color: #001219;
-    }
-
-    main {
-      padding: 30px 20px;
-    }
-
-    h2 {
-      text-align: center;
       color: #005f73;
-    }
-
-    section {
-      padding: 20px;
     }
 
     footer {
       background: #005f73;
-      color: #fff;
-      text-align: center;
-      padding: 15px 0;
-      margin-top: 40px;
+      color: white;
     }
 
     @media (max-width: 768px) {
+      .video-sides {
+        display: none;
+      }
+
       .content {
         width: 95%;
-      }
-      .video-sides {
-        display: none; /* Hide video on small screens for performance */
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Video background on sides -->
   <div class="video-sides left-video">
     <video autoplay muted loop>
-      <source src="videos/bg.mp4" type="video/mp4">
+      <source src="videos/855936-hd_1920_1080_30fps.mp4" type="video/mp4" />
     </video>
   </div>
+
   <div class="video-sides right-video">
     <video autoplay muted loop>
-      <source src="videos/855936-hd_1920_1080_30fps.mp4" type="video/mp4">
+      <source src="videos/855936-hd_1920_1080_30fps.mp4" type="video/mp4" />
     </video>
   </div>
 
@@ -137,30 +97,20 @@
     <header>
       <h1>Contact & More Info</h1>
     </header>
-
     <nav>
-      <a href="index.html">Home</a>
-      <a href="introduction.html">Top Players</a>
-      <a href="tips.html">Rankings</a>
-      <a href="history.html">Photo Bombers</a>
-      <a href="equipment.html">Team Gallery</a>
-      <a href="contact.html">Contact</a>
+      <a href="#">Home</a>
+      <a href="#">Top Players</a>
+      <a href="#">Rankings</a>
+      <a href="#">Photo Bombers</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact</a>
     </nav>
-
     <main>
-      <section>
-        <h2>Get in Touch</h2>
-        <p>If you have any questions or need more information, feel free to reach out!</p>
-        <ul>
-          <li><strong>Email:</strong> info@caragadartknights.com</li>
-          <li><strong>Facebook:</strong> @CaragaDartKnights</li>
-          <li><strong>Instagram:</strong> @caraga_darts</li>
-        </ul>
-      </section>
+      <h2>Get in Touch</h2>
+      <p>Feel free to reach out to us via email or social media.</p>
     </main>
-
     <footer>
-      <p>&copy; 2025 Caraga Dart Knights. All rights reserved.</p>
+      &copy; 2025 Caraga Dart Knights. All rights reserved.
     </footer>
   </div>
 
