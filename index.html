@@ -9,15 +9,40 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f7f9fc;
       color: #333;
       line-height: 1.6;
+      background: transparent; /* video will show behind */
     }
+    /* Background video styles */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.7); /* Optional: darken video a bit for text contrast */
+    }
+
+    /* Wrapper to keep content above video and readable */
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
     header {
       background: #005f73;
       color: #fff;
       padding: 20px 0;
       text-align: center;
+      border-radius: 8px;
     }
     nav {
       background: #0a9396;
@@ -25,6 +50,8 @@
       justify-content: center;
       gap: 20px;
       padding: 15px 0;
+      border-radius: 8px;
+      margin-top: 10px;
     }
     nav a {
       color: #e9d8a6;
@@ -39,18 +66,17 @@
       color: #001219;
     }
     main {
-      max-width: 1000px;
-      margin: 20px auto;
+      margin-top: 30px;
       padding: 0 20px;
     }
     h2 {
       text-align: center;
+      margin-bottom: 25px;
     }
     .players {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-      margin-top: 30px;
       justify-content: center;
     }
     .player-card {
@@ -81,6 +107,7 @@
       text-align: center;
       padding: 15px 0;
       margin-top: 40px;
+      border-radius: 8px;
     }
     @media (max-width: 600px) {
       .player-card {
@@ -91,57 +118,65 @@
 </head>
 <body>
 
-<header>
-  <h1>Caraga Dart Knights</h1>
-  <p>Meet the top dart players from the Caraga region</p>
-</header>
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="videos/background.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-  <nav>
-  <a href="index.html">Home</a>
-  <a href="introduction.html">Top Players</a>
-  <a href="tips.html">Rankings</a>
-  <a href="history.html">Photo Bombers</a>
-  <a href="equipment.html">Team Gallery</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <div class="content-wrapper">
+    <header>
+      <h1>Caraga Dart Knights</h1>
+      <p>Meet the top dart players from the Caraga region</p>
+    </header>
 
-<main>
-  <h2>Featured Dart Players of Caraga</h2>
-  <div class="players">
-    <div class="player-card">
-      <img src="images/player1.jpg" alt="Player 1" />
-      <h3>Godofredo Abuzo IV</h3>
-      <p><strong>City:</strong> Butuan City</p>
-      <p><strong>Specialty:</strong> Consistent Finisher</p>
-      <p><strong>Achievements:</strong> 3x Regional Champion</p>
-    </div>
-    <div class="player-card">
-      <img src="images/player2.jpg" alt="Player 2" />
-      <h3>Anna Mae Castillo</h3>
-      <p><strong>City:</strong> Surigao City</p>
-      <p><strong>Specialty:</strong> Bullseye Precision</p>
-      <p><strong>Achievements:</strong> 2024 Women’s League Winner</p>
-    </div>
-    <div class="player-card">
-      <img src="images/player3.jpg" alt="Player 3" />
-      <h3>Carlito Reyes</h3>
-      <p><strong>City:</strong> Tandag</p>
-      <p><strong>Specialty:</strong> Long Shot Accuracy</p>
-      <p><strong>Achievements:</strong> Top 5 Mindanao Darts 2023</p>
-    </div>
-    <div class="player-card">
-      <img src="images/player4.jpg" alt="Player 4" />
-      <h3>Eliza Manlapig</h3>
-      <p><strong>City:</strong> Cabadbaran</p>
-      <p><strong>Specialty:</strong> Fast Throws</p>
-      <p><strong>Achievements:</strong> Darts Rising Star Award 2022</p>
-    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="introduction.html">Top Players</a>
+      <a href="tips.html">Rankings</a>
+      <a href="history.html">Photo Bombers</a>
+      <a href="equipment.html">Team Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+      <h2>Featured Dart Players of Caraga</h2>
+      <div class="players">
+        <div class="player-card">
+          <img src="images/player1.jpg" alt="Player 1" />
+          <h3>Godofredo Abuzo IV</h3>
+          <p><strong>City:</strong> Butuan City</p>
+          <p><strong>Specialty:</strong> Consistent Finisher</p>
+          <p><strong>Achievements:</strong> 3x Regional Champion</p>
+        </div>
+        <div class="player-card">
+          <img src="images/player2.jpg" alt="Player 2" />
+          <h3>Anna Mae Castillo</h3>
+          <p><strong>City:</strong> Surigao City</p>
+          <p><strong>Specialty:</strong> Bullseye Precision</p>
+          <p><strong>Achievements:</strong> 2024 Women’s League Winner</p>
+        </div>
+        <div class="player-card">
+          <img src="images/player3.jpg" alt="Player 3" />
+          <h3>Carlito Reyes</h3>
+          <p><strong>City:</strong> Tandag</p>
+          <p><strong>Specialty:</strong> Long Shot Accuracy</p>
+          <p><strong>Achievements:</strong> Top 5 Mindanao Darts 2023</p>
+        </div>
+        <div class="player-card">
+          <img src="images/player4.jpg" alt="Player 4" />
+          <h3>Eliza Manlapig</h3>
+          <p><strong>City:</strong> Cabadbaran</p>
+          <p><strong>Specialty:</strong> Fast Throws</p>
+          <p><strong>Achievements:</strong> Darts Rising Star Award 2022</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      &copy; 2025 Caraga Dart Knights. All rights reserved.
+    </footer>
   </div>
-</main>
-
-<footer>
-  &copy; 2025 Caraga Dart Knights. All rights reserved.
-</footer>
 
 </body>
 </html>
