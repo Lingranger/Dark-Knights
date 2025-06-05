@@ -34,6 +34,14 @@
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
     header {
@@ -60,9 +68,15 @@
       border-radius: 5px;
       transition: background 0.3s;
     }
-    nav a:hover {
+    nav a:hover,
+    nav a:focus {
       background: #90e0ef;
       color: #03045e;
+      outline: none;
+    }
+    nav a:focus-visible {
+      outline: 3px solid #90e0ef;
+      outline-offset: 2px;
     }
     main {
       margin-top: 30px;
@@ -113,8 +127,8 @@
 <body>
 
   <!-- Background Video -->
-  <video autoplay muted loop playsinline id="bg-video">
-    <source src="videos/855936-hd_1920_1080_30fps.mp4" type="video/mp4" />
+  <video autoplay muted loop playsinline id="bg-video" aria-hidden="true" tabindex="-1">
+    <source src="videos/71943-540487063_small.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
@@ -124,7 +138,7 @@
       <p>Candid moments and unforgettable memories with the Caraga Dart Knights</p>
     </header>
 
-    <nav>
+    <nav aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="introduction.html">Top Players</a>
       <a href="tips.html">Rankings</a>
@@ -137,19 +151,19 @@
       <h2>Gallery</h2>
       <div class="gallery">
         <div>
-          <img src="images/475234994_1027038786133555_7561344266609300130_n.jpg" alt="Team group photo" />
+          <img src="images/475234994_1027038786133555_7561344266609300130_n.jpg" alt="Team group photo" loading="lazy" />
           <p class="caption">Caraga Dart Knights - Regional Meet</p>
         </div>
         <div>
-          <img src="images/475153219_1027038946133539_4464767148433026097_n.jpg" alt="Funny photobomb moment" />
+          <img src="images/475153219_1027038946133539_4464767148433026097_n.jpg" alt="Funny photobomb moment" loading="lazy" />
           <p class="caption">Serious Plays</p>
         </div>
         <div>
-          <img src="images/475641397_1027039212800179_759110381442927676_n.jpg" alt="Group huddle" />
+          <img src="images/475641397_1027039212800179_759110381442927676_n.jpg" alt="Group huddle" loading="lazy" />
           <p class="caption">During finals match</p>
         </div>
         <div>
-          <img src="images/475168459_1027039076133526_1312350449243275226_n.jpg" alt="Photobomb selfie" />
+          <img src="images/475168459_1027039076133526_1312350449243275226_n.jpg" alt="Photobomb selfie" loading="lazy" />
           <p class="caption">Unexpected guest in a team selfie</p>
         </div>
         <!-- Add more photos as needed -->
