@@ -23,17 +23,18 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: transparent; /* so video shows through */
+      background: transparent;
       color: #333;
       line-height: 1.6;
       position: relative;
       z-index: 1;
     }
+
     .content-wrapper {
       max-width: 800px;
       margin: 20px auto;
       padding: 20px;
-      background-color: rgba(247, 249, 252, 0.9); /* white with slight transparency */
+      background-color: rgba(247, 249, 252, 0.9);
       border-radius: 10px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
       position: relative;
@@ -47,6 +48,12 @@
       text-align: center;
       border-radius: 10px 10px 0 0;
     }
+
+    /* 👇 Make h1 title white */
+    header h1 {
+      color: white;
+    }
+
     nav {
       background: #0a9396;
       display: flex;
@@ -56,6 +63,7 @@
       border-radius: 0 0 10px 10px;
       margin-bottom: 20px;
     }
+
     nav a {
       color: #e9d8a6;
       text-decoration: none;
@@ -64,16 +72,20 @@
       border-radius: 5px;
       transition: background 0.3s;
     }
+
     nav a:hover {
       background: #94d2bd;
       color: #001219;
     }
+
     main {
       padding: 0 10px;
     }
+
     h2 {
       color: #005f73;
     }
+
     .ranking {
       background: #ffffff;
       padding: 15px 20px;
@@ -82,13 +94,16 @@
       border-radius: 5px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
+
     .ranking h3 {
       margin: 0 0 5px;
       color: #ca6702;
     }
+
     .ranking p {
       margin: 0;
     }
+
     footer {
       background: #005f73;
       color: #fff;
@@ -97,6 +112,7 @@
       margin-top: 40px;
       border-radius: 10px;
     }
+
     @media (max-width: 600px) {
       nav {
         flex-wrap: wrap;
