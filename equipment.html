@@ -3,16 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dart Knights Hub - Equipment</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Team Photo Gallery | Caraga Dart Knights</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f7f9fc;
+      background: #f2f2f2;
       color: #333;
-      line-height: 1.6;
     }
     header {
       background: #005f73;
@@ -40,38 +38,32 @@
       color: #001219;
     }
     main {
-      max-width: 900px;
-      margin: 20px auto;
+      max-width: 1000px;
+      margin: 30px auto;
       padding: 0 20px;
     }
-    h1, h2 {
+    h2 {
       text-align: center;
-      margin-bottom: 20px;
+      color: #005f73;
+      margin-bottom: 30px;
     }
-    .equipment-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
     }
-    .equipment-item {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
-      padding: 15px;
-      max-width: 250px;
-      text-align: center;
-      transition: transform 0.3s;
-    }
-    .equipment-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgb(0 0 0 / 0.2);
-    }
-    .equipment-item img {
-      max-width: 100%;
+    .gallery img {
+      width: 100%;
       height: auto;
       border-radius: 8px;
-      margin-bottom: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      object-fit: cover;
+    }
+    .caption {
+      text-align: center;
+      font-style: italic;
+      margin-top: 5px;
+      color: #666;
     }
     footer {
       background: #005f73;
@@ -85,47 +77,39 @@
 <body>
 
 <header>
-  <h1>Dart Knights Hub</h1>
-  <p>Your resource for darts tips, history, and gear</p>
+  <h1>Team Photo Gallery</h1>
+  <p>Moments with the Dart Knights</p>
 </header>
 
 <nav>
   <a href="index.html">Home</a>
-  <a href="introduction.html">Introduction</a>
-  <a href="tips.html">Tips & Techniques</a>
-  <a href="history.html">History</a>
-  <a href="equipment.html">Equipment</a>
+  <a href="introduction.html">Top Players</a>
+  <a href="tips.html">Rankings</a>
+  <a href="history.html">Photo Bombers</a>
+  <a href="equipment.html">Team Gallery</a>
   <a href="contact.html">Contact</a>
 </nav>
 
 <main>
-  <h2>Dart Equipment Essentials</h2>
-  <div class="equipment-list">
-    <div class="equipment-item">
-      <img src="images/D217-Tip-steel-Darts-Needle-aluminum-Dart-Shafts-Laser-Dart-Flights-Durable-Dardos-Throwing-Toy.webp" alt="Steel Tip Darts" />
-      <h3>Steel Tip Darts</h3>
-      <p>The classic darts used for traditional bristle dartboards, known for their durability and precision.</p>
+  <h2>📸 Dart Knights in Action</h2>
+  <div class="gallery">
+    <div>
+      <img src="images/team1.jpg" alt="Team photo 1" />
+      <p class="caption">Caraga Dart Knights - Regional Tournament</p>
     </div>
-    <div class="equipment-item">
-      <img src="images/71qO4DVUYlL._AC_SL1500_.jpg" alt="Soft Tip Darts" />
-      <h3>Soft Tip Darts</h3>
-      <p>Designed for electronic dartboards, soft tip darts offer safety and are ideal for beginners.</p>
+    <div>
+      <img src="images/team2.jpg" alt="Team photo 2" />
+      <p class="caption">Celebrating a Win Together</p>
     </div>
-    <div class="equipment-item">
-      <img src="images/OIP.jpg" alt="Standard Dartboard" />
-      <h3>Standard Dartboard</h3>
-      <p>Made of sisal fibers, the traditional dartboard used in most professional games and leagues.</p>
+    <div>
+      <img src="images/team3.jpg" alt="Team photo 3" />
+      <p class="caption">Focused at the Oche</p>
     </div>
-    <div class="equipment-item">
-      <img src="images/OIP (1).jpg" alt="Electronic Dartboard" />
-      <h3>Electronic Dartboard</h3>
-      <p>Features sensors to automatically calculate scores, perfect for casual play and families.</p>
+    <div>
+      <img src="images/team4.jpg" alt="Team photo 4" />
+      <p class="caption">After the Finals - Smiles All Around</p>
     </div>
-    <div class="equipment-item">
-      <img src="images/c8188731-560e-4955-928b-6cd1d7021c1e.jpg._CB301335460_.jpg" alt="Dart Case" />
-      <h3>Dart Case</h3>
-      <p>A compact case to store and protect your darts and accessories on the go.</p>
-    </div>
+    <!-- Add more photos here as needed -->
   </div>
 </main>
 
