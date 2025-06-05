@@ -14,23 +14,48 @@
     body, html {
       height: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #f7f9fc;
     }
 
-    .video-bg {
+    .video-sides {
       position: fixed;
       top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
+      bottom: 0;
+      width: 20%;
       z-index: -1;
     }
 
-    .video-bg video {
+    .left-video, .right-video {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .left-video video,
+    .right-video video {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.15; /* makes sure it doesn’t overpower content */
+      opacity: 0.2;
+    }
+
+    .left-video {
+      left: 0;
+    }
+
+    .right-video {
+      right: 0;
+    }
+
+    .content {
+      width: 60%;
+      background: none;
     }
 
     header {
@@ -46,6 +71,7 @@
       justify-content: center;
       gap: 20px;
       padding: 15px 0;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -63,12 +89,7 @@
     }
 
     main {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 0 20px;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 30px 20px;
     }
 
     h2 {
@@ -80,15 +101,6 @@
       padding: 20px;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      margin-bottom: 10px;
-    }
-
     footer {
       background: #005f73;
       color: #fff;
@@ -96,48 +108,61 @@
       padding: 15px 0;
       margin-top: 40px;
     }
+
+    @media (max-width: 768px) {
+      .content {
+        width: 95%;
+      }
+      .video-sides {
+        display: none; /* Hide video on small screens for performance */
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Video Background -->
-  <div class="video-bg">
+  <!-- Video background on sides -->
+  <div class="video-sides left-video">
     <video autoplay muted loop>
-      <source src="videos/855936-hd_1920_1080_30fps.mp4" type="video/mp4" />
-      Your browser does not support HTML5 video.
+      <source src="videos/bg.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="video-sides right-video">
+    <video autoplay muted loop>
+      <source src="videos/855936-hd_1920_1080_30fps.mp4" type="video/mp4">
     </video>
   </div>
 
-  <!-- Header and Navigation -->
-  <header>
-    <h1>Contact & More Info</h1>
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="introduction.html">Top Players</a>
-    <a href="tips.html">Rankings</a>
-    <a href="history.html">Photo Bombers</a>
-    <a href="equipment.html">Team Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <div class="content">
+    <header>
+      <h1>Contact & More Info</h1>
+    </header>
 
-  <!-- Main Content -->
-  <main>
-    <section>
-      <h2>Get in Touch</h2>
-      <p>If you have any questions, suggestions, or would like to learn more about the Caraga Dart Knights, feel free to reach out to us via email or through our social media pages. We’d love to hear from you!</p>
-      <ul>
-        <li><strong>Email:</strong> info@caragadartknights.com</li>
-        <li><strong>Facebook:</strong> @CaragaDartKnights</li>
-        <li><strong>Instagram:</strong> @caraga_darts</li>
-      </ul>
-    </section>
-  </main>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="introduction.html">Top Players</a>
+      <a href="tips.html">Rankings</a>
+      <a href="history.html">Photo Bombers</a>
+      <a href="equipment.html">Team Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Caraga Dart Knights. All rights reserved.
-  </footer>
+    <main>
+      <section>
+        <h2>Get in Touch</h2>
+        <p>If you have any questions or need more information, feel free to reach out!</p>
+        <ul>
+          <li><strong>Email:</strong> info@caragadartknights.com</li>
+          <li><strong>Facebook:</strong> @CaragaDartKnights</li>
+          <li><strong>Instagram:</strong> @caraga_darts</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Caraga Dart Knights. All rights reserved.</p>
+    </footer>
+  </div>
 
 </body>
 </html>
